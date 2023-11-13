@@ -1,6 +1,6 @@
 var display = document.getElementById('display');
 
-
+document.getElementById('mod').addEventListener('click', () => buttonClick('%'));
 document.getElementById('plus').addEventListener('click', () => buttonClick('+'));
 document.getElementById('minus').addEventListener('click', () => buttonClick('-'));
 document.getElementById('multiply').addEventListener('click', () => buttonClick('*'));
@@ -15,19 +15,20 @@ document.getElementById('one').addEventListener('click', () => buttonClick('1'))
 document.getElementById('two').addEventListener('click', () => buttonClick('2'));
 document.getElementById('three').addEventListener('click', () => buttonClick('3'));
 document.getElementById('zero').addEventListener('click', () => buttonClick('0'));
+document.getElementById('double-zero').addEventListener('click', () => buttonClick('00'));
 document.getElementById('equals').addEventListener('click', calculate);
 document.getElementById('clear').addEventListener('click', clearDisplay);
 
 function buttonClick(value) {
-    switch (value) {
-        case '=':
-            calculate();
+switch (value) {
+    case '=':
+     calculate();
             break;
-        case 'C':
-            clearDisplay();
+    case 'C':
+     clearDisplay();
             break;
         default:
-            append(value);
+    append(value);
             break;
     }
 }
